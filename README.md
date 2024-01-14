@@ -1,6 +1,6 @@
 # php-rule-builder
 
-I couldn't find an open source PHP rule builder with a decent user experience. So I made one! Modelled after CloudFlare Firewall Rules component. Responsive down to mobile.
+I couldn't find an open source PHP rule builder with a decent user experience. So I made one! Modelled after CloudFlare Firewall Rules component. Responsive down to mobile. MIT license, updates welcomed.
 
 ![image](https://github.com/mdeacey/php-rule-builder/assets/9213113/c591138e-7447-4793-ab19-23844bea57ed)
 
