@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+h4 {
+    margin-bottom: 15px;
+}
+
+.inp {
+    padding: 8px;
+    width: 180px;
+    border: 1px solid #797979;
+    display: block;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.rule-name .inp{
+    width: 500px;
+    max-width: 100%;
+}
+
+.and_or button,
+.and_or_crumb,
+.btn-final {
+    background-color: #d9d9d9;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: 0.4s ease-in-out;
+}
+.btn-deploy{
+    background-color: #056dff;
+    color: #ffffff;
+}
+
+.final-btns{
+    margin-top: 20px;
+    text-align: end;
+}
+.and_or button:hover {
+    background-color: #b6b6b6;
+}
+
+.and_or_crumb {
+    font-size: 14px;
+    background-color: #f2f2f2;
+    border-color: #b6b6b6;
+    display: inline-block;
+}
+
+.value {
+    flex: 1;
+}
+
+.value .inp {
+    width: 100%;
+}
+
+.rule {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    padding: 5px 0;
+    position: relative;
+}
+
+.and_or_crumb::after {
+    content: "";
+    position: absolute;
+    height: 65px;
+    width: 0.5px;
+    background-color: #797979;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 31px;
+    z-index: -1;
+}
+
+.rule:first-of-type::after,
+.or_crumb::after {
+    content: none;
+}
+
+.label {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+.rule>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.and_or {
+    flex-direction: row !important;
+    gap: 10px;
+}
+
+.delete img {
+    height: 16px;
+}
+
+.delete button {
+    padding: 8px;
+    background-color: transparent;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    line-height: 14px;
+    border: none;
+}
+
+.delete button:hover {
+    opacity: 0.7;
+}
+
+.rule .label {
+    display: none;
+}
+
+.rule:first-of-type .label {
+    display: block;
+}
+
+.or_btn {
+    display: none;
+}
+
+.rule:last-of-type .or_btn {
+    display: block;
+}
+
+.action{
+    margin-top: 30px;
+}
+
+.mobile-show{
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .rules {
+        margin: 0 -20px;
+    }
+    .rule{
+        padding: 20px;
+        align-items: center;
+        background-color: #f2f2f2;
+        flex-direction: column;
+    }
+    .rule-name{
+        background-color: transparent;
+    }
+
+    .and_or_crumb::after{
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        height: 100%;
+    }
+    .rule>div{
+        width: 100%;
+    }
+    .inp{
+        width: 100%;
+    }
+    .and_or{
+        justify-content: start !important;
+    }
+    .desktop-show{
+        display: none !important;
+    }
+    .delete.mobile-show{
+        align-items: end;
+    }
+    .mobile-show{
+        display: flex !important;
+    }
+}
